@@ -3,6 +3,8 @@ Array 刷題順序
 
 <mark>總共 72 題。<mark>
 
+https://leetcode.com/problem-list/wrhhjdli/
+
 | Number | Title                                                   | Level  | Note                 |
 |--------|---------------------------------------------------------|--------|----------------------|
 | 27     | Remove Element                                          | Easy   | 单向双指针                |
