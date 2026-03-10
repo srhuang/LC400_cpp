@@ -6,8 +6,7 @@ Using C++
 
 # Introduction
 
-主要專注在 Leetcode 前400題的刷題攻略，扣除掉 20 題 database, shell 相關的題目，總共剩下 380 題，
-分成 18 類別：
+主要專注在 Leetcode 前400題的刷題攻略，扣除掉 20 題 database, shell 相關的題目，總共剩下 380 題，分成 18 類別：
 1. Array
 2. String
 3. Math
