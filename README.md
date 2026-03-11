@@ -30,8 +30,6 @@ Using C++
 * https://vbnetvbnet.github.io/cs/#nav-jieshao
 * https://www.cspiration.com/#/leetcodeClassification
 
-其實還有很多刷題攻略，我也只是選擇其中一條路而已，賭上身家後就全力衝刺，也接受之後的結果。
-
 # Build Command
 
 ``` sh=

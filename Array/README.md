@@ -3,7 +3,7 @@ Array 刷題順序
 
 <mark>總共 72 題。<mark>
 
-https://leetcode.com/problem-list/wrhhjdli/
+[CS 400-1 : Array](https://leetcode.com/problem-list/wrhhjdli/){:target="_blank"} 
 
 | Number | Title                                                   | Level  | Note                 |
 |--------|---------------------------------------------------------|--------|----------------------|
