@@ -4,17 +4,17 @@ using namespace std;
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val){
-        int n = nums.size();
+        int j = nums.size();
         int i = 0;
-        while(i < n) {
+        while(i < j) {
             if(nums[i] == val) {
-                nums[i] = nums[n - 1];
-                n--;
+                nums[i] = nums[j - 1];
+                j--;
             } else {
                 i++;
             }
         }
-        return n;
+        return j;
     }
 };
 
