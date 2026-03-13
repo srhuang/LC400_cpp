@@ -5,15 +5,15 @@ using namespace std;
 class Solution{
 public:
     int removeDuplicates(vector<int> &nums){
-        int cnt=0;
         if(nums.size() == 0)
             return 0;
-        for(int i=1; i<nums.size(); i++){
+        int cnt = 0;
+        for(int i = 1; i < nums.size(); i++){
             if(nums[cnt] != nums[i]){
-                nums[++cnt] = nums[i];            
+                nums[++cnt] = nums[i];
             }
         }
-        return cnt+1;
+        return cnt + 1;
     }
 };
 
