@@ -11,7 +11,7 @@
 * 這個解法會造成 Time Limit Exceeded。
 
 ## Complexity
-* Time: $O(n*k)$
+* Time: $O(n\*k)$
 * Space: $O(1)$
 
 # Approach 2: Using Extra Array
