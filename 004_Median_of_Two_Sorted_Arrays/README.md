@@ -14,7 +14,7 @@
 * m1 or m2 等於 size 表示完全取該陣列的數值。
 * 需要考慮總個數是奇數還是偶數。
 * 這題困難的是邊際條件很複雜。
-* 採用 [https://zxi.mytechroad.com/blog/algorithms/binary-search/leetcode-4-median-of-two-sorted-arrays/](花花酱 LeetCode 4. Median of Two Sorted Arrays)
+* 採用 [花花酱 LeetCode 4. Median of Two Sorted Arrays](https://zxi.mytechroad.com/blog/algorithms/binary-search/leetcode-4-median-of-two-sorted-arrays/)
 
 ## Complexity
 * Time: $O(log(min(n1, n2)))$
