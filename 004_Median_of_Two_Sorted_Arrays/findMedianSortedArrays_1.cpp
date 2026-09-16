@@ -17,32 +17,31 @@ public:
         // binary search for m1
         int left = 0;
         int right = n1;
-        while (left < right)
+        while (left <= right)
         {
-            int m1 = left + (right - left) / 2;
+            int m1 = (left + right) / 2;
             int m2 = k - m1;
-            // check m1
-            if (nums1[m1] < nums2[m2 - 1]) {
-                left = m1 + 1;
+
+            int n1_maxLeft = (m1 == 0) ? INT_MIN : nums1[m1 - 1];
+            int n1_minRight = (m1 == n1) ? INT_MAX : nums1[m1];
+            int n2_maxLeft = (m2 == 0) ? INT_MIN : nums2[m2 - 1];
+            int n2_minRight = (m2 == n2) ? INT_MAX : nums2[m2];
+
+            // check the condition
+            if (n1_maxLeft <= n2_minRight && n2_maxLeft <= n1_minRight ) {
+                if ((n1 + n2) % 2 == 0) { //even
+                    return 
+                    (max(n1_maxLeft, n2_maxLeft) + min(n1_minRight, n2_minRight)) / 2.0;
+                } else { // odd
+                    return max(n1_maxLeft, n2_maxLeft);
+                }
+            } else if (n1_maxLeft > n2_minRight) {
+                right = m1 - 1;
             } else {
-                right = m1;
+                left = m1 + 1;
             }
         }
-
-        // calculate median
-        int m1 = left;
-        int m2 = k - m1;
-        int c1 = max(m1 == 0 ? INT_MIN : nums1[m1 - 1], 
-                     m2 == 0 ? INT_MIN : nums2[m2 - 1]);
-        // odd
-        if ((n1 + n2) % 2 == 1) {
-            return c1;
-        }
-
-        // even
-        int c2 = min(m1 == n1 ? INT_MAX : nums1[m1],
-                     m2 == n2 ? INT_MAX : nums2[m2]);
-        return (c1 + c2) * 0.5;
+        return -1;
     }
 };
 
