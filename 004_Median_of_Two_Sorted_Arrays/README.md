@@ -1,6 +1,6 @@
 004 Median of Two Sorted Arrays
 ===
-
+`Array` `Binary Search`
 # Explanation
 * 給定兩個已排序的 Array: n1, n2。
 * 找出中位數。

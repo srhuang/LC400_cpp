@@ -1,6 +1,6 @@
 001 Two Sum
 ===
-`Hash`
+`Hash` `Math`
 # Explanation
 * 給定一個任意的 array ，以及一個 target value。
 * 回傳兩個 index numbers。

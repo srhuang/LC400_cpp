@@ -1,6 +1,6 @@
 003 Longest Substring Without Repeating Characters
 ===
-
+`Hash` `Sliding Window`
 # Explanation
 * 給定一個 string。
 * 找出最長不重複字元的 substring。

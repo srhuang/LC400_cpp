@@ -1,6 +1,6 @@
 005 Longest Palindromic Substring
 ===
-
+`String` `DP`
 # Explanation
 * 給定一個 string。
 * 找出最長的回文 substring。

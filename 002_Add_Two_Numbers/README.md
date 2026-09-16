@@ -1,6 +1,6 @@
 002 Add Two Numbers
 ===
-
+`Linked List` `Math`
 # Explanation
 * 利用 linked list 把十進位的數字串起來。
 * 執行數學加法後，回傳 linked list 答案。
