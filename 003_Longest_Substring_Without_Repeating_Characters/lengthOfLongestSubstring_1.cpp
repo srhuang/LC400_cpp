@@ -22,6 +22,7 @@ public:
         return ans;
     }
 
+private:
     bool checkUnique(string& s, int start, int end) {
         unordered_set<char> chars;
 
