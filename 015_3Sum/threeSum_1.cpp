@@ -8,37 +8,37 @@ public:
         // sorting
         sort(begin(nums), end(nums));
 
-        // n times twoSum
+        // n times two pointers algorithm
+        int sz = nums.size();
         vector<vector<int>> ans;
-        for(int i = 0; i < nums.size(); i++) {
+        for(int i = 0; i < sz; i++) {
+            // two pointers algorithm
+            int left = i + 1;
+            int right = sz - 1;
+
             // ignore the duplicate results
-            if((i == 0) || (nums[i-1] != nums[i])) {
-                twoSum(nums, i, ans);
+            if((i != 0) && (nums[i-1] == nums[i])) {
+                continue;
             }
+
+            while(left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                if(sum < 0) {
+                    left++;
+                }else if(sum > 0) {
+                    right--;
+                }else{
+                    ans.push_back({nums[i], nums[left], nums[right]});
+                    left++;
+                    right--;
+                    // ignore the duplicate results
+                    while((left < right) && (nums[left] == nums[left-1])) {
+                        left++;
+                    }
+                }
+            } // while
         }
         return ans;
-    }
-
-private:
-    void twoSum(vector<int>& nums, int idx, vector<vector<int>>& ret) {
-        int left = idx + 1;
-        int right = nums.size() - 1;
-        while(left < right) {
-            int sum = nums[idx] + nums[left] + nums[right];
-            if(sum == 0) {
-                ret.push_back({nums[idx], nums[left], nums[right]});
-                left++;
-                right--;
-                // ignore the duplicate results
-                while((left < right) && (nums[left] == nums[left-1])) {
-                    left++;
-                }
-            }else if(sum < 0) {
-                left++;
-            }else {
-                right--;
-            }
-        } // while
     }
 };
 
