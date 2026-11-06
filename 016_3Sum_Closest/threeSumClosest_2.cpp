@@ -24,7 +24,7 @@ public:
                 }else if(sum > target) {
                     right--;
                 }else{
-                    return target;
+                    return sum;
                 }
                 // update the diff
                 if(abs(sum - target) < abs(diff)) {
