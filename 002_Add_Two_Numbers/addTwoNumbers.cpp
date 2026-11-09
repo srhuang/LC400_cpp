@@ -2,14 +2,16 @@
 
 using namespace std;
 
+// Linked List
 struct ListNode {
+    // variables
     int val;
-    ListNode *next;
+    ListNode* next;
 
     // constructors
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
+    ListNode() {val = 0; next = nullptr;}
+    ListNode(int x) {val = x; next = nullptr;}
+    ListNode(int x, ListNode* node) {val = x; next = node;}
 };
 
 
@@ -38,42 +40,41 @@ public:
     }
 };
 
-ListNode* arrayCopy(int* array, int num){
-    printf("Copy Array to linked list : ");
-    printf("%d", array[0]);
-    ListNode* head = new ListNode(array[0]);
-
-    ListNode *pre = head;
-    for (int i = 1; i < num; i++)
-    {
-        printf("->%d", array[i]);
-        ListNode* current = new ListNode(array[i]);
-        pre->next = current;
-        pre = current;
+ListNode* arrayToList(vector<int>& nums) {
+    int sz = nums.size();
+    if (nums.size() == 0) {
+        return nullptr;
     }
-    printf("\n");
+    // first element
+    ListNode* head = new ListNode(nums[0]);
+    ListNode* cur = head;
+
+    // the rest elements
+    for(int i = 1; i < sz; i++) {
+        cur->next = new ListNode(nums[i]);
+        cur = cur->next;
+    }
     return head;
 }
 
 int main(int argc, char* argv[])
 {
-    // input data
-    int data1[3] = {2, 4, 3};
-    int data2[3] = {5, 6, 6};
-    ListNode *data1_head = NULL;
-    ListNode *data2_head = NULL;
-    data1_head = arrayCopy(data1, sizeof(data1)/sizeof(data1[0]));
-    data2_head = arrayCopy(data2, sizeof(data2)/sizeof(data2[0]));
+    // input
+    vector<int> data1 = {2, 4, 3};
+    vector<int> data2 = {5, 6, 6};
+    ListNode *list1 = arrayToList(data1);
+    ListNode *list2 = arrayToList(data2);
 
     // solution
     Solution s;
-    ListNode *answer = s.addTwoNumbers(data1_head, data2_head);
+    ListNode *answer = s.addTwoNumbers(list1, list2);
 
-    // print
-    ListNode *temp = answer;
-    while(nullptr != temp){
-        cout << temp->val << " ";
-        temp = temp->next;
+    // output
+    cout << "Answer: " << endl;
+    ListNode *cur = answer;
+    while(cur != nullptr){
+        cout << cur->val << " ";
+        cur = cur->next;
     }
     cout << endl;
 
