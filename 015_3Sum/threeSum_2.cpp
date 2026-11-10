@@ -11,9 +11,9 @@ public:
 
         // n times twoSum
         vector<vector<int>> ans;
-        for(int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i < nums.size(); i++) {
             // ignore the duplicate results
-            if((i == 0) || (nums[i-1] != nums[i])) {
+            if ((i == 0) || (nums[i-1] != nums[i])) {
                 twoSum(nums, i, ans);
             }
         }
@@ -22,13 +22,13 @@ public:
 
     void twoSum(vector<int>& nums, int i, vector<vector<int>>& ret) {
         unordered_set<int> seen;
-        for(int j = i + 1; j < nums.size(); j++) {
+        for (int j = i + 1; j < nums.size(); j++) {
             int complement = 0 - nums[i] - nums[j];
             // find the complement
-            if(seen.count(complement)) {
+            if (seen.count(complement)) {
                 ret.push_back({nums[i], complement, nums[j]});
                 // ignore the duplicate results
-                while((j + 1 < nums.size()) && (nums[j] == nums[j+1])) {
+                while ((j + 1 < nums.size()) && (nums[j] == nums[j+1])) {
                     j++;
                 }
             }
@@ -47,8 +47,8 @@ int main(int argc, char* argv[]) {
 
     // output
     cout << "Answer: " << endl;
-    for(int i = 0; i < ans.size(); i++) {
-        for(int j = 0; j < ans[i].size(); j++) {
+    for (int i = 0; i < ans.size(); i++) {
+        for (int j = 0; j < ans[i].size(); j++) {
             cout << ans[i][j] << " ";
         }
         cout << endl;
