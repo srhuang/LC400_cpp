@@ -17,8 +17,7 @@ public:
         // binary search for m1
         int left = 0;
         int right = n1;
-        while (left <= right)
-        {
+        while (left <= right) {
             int m1 = (left + right) / 2;
             int m2 = k - m1;
 
@@ -45,21 +44,16 @@ public:
     }
 };
 
-int main(int argc, char* argv[])
-{
-    // input data
-    int ary1[] = {1, 2};
-    int ary2[] = {3, 4};
-    int m = sizeof(ary1) / sizeof(ary1[0]);
-    int n = sizeof(ary2) / sizeof(ary2[0]);
-    vector<int> nums1(ary1, ary1 + m);
-    vector<int> nums2(ary2, ary2 + n);
+int main(int argc, char* argv[]) {
+    // input
+    vector<int> data1 = {1, 2};
+    vector<int> data2 = {3, 4};
 
     // solution
     Solution s;
-    double ans = s. findMedianSortedArrays(nums1, nums2);
+    double ans = s. findMedianSortedArrays(data1, data2);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
 
 }
