@@ -10,7 +10,6 @@ public:
 
         // State : take the first m(or n) elements
         bool dp[m+1][n+1];
-
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++) {
                 // Base case
@@ -35,7 +34,7 @@ public:
 };
 
 int main (int argc, char* argv[]) {
-    // input data
+    // input
     string text = "aa";
     string pattern = "a*";
 
@@ -43,6 +42,8 @@ int main (int argc, char* argv[]) {
     Solution s;
     bool ans = s.isMatch(text, pattern);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
+
+    return 0;
 }

@@ -5,7 +5,6 @@ using namespace std;
 class Solution {
 public:
     bool isMatch(string s, string p) {
-
         if (p.size() == 0) {
             return (s.size() == 0);
         }
@@ -21,13 +20,11 @@ public:
         } else {
             return (firstMatch && isMatch(s.substr(1), p.substr(1)));
         }
-
     }
-
 };
 
 int main (int argc, char* argv[]) {
-    // input data
+    // input
     string text = "aa";
     string pattern = "a*";
 
@@ -35,6 +32,8 @@ int main (int argc, char* argv[]) {
     Solution s;
     bool ans = s.isMatch(text, pattern);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
+
+    return 0;
 }
