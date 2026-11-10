@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        if(strs.empty()) {
+        if (strs.empty()) {
             return "";
         }
         return divide(strs, 0, strs.size()-1);
@@ -13,7 +13,7 @@ public:
 
 private:
     string divide(vector<string>& strs, int left, int right) {
-        if(left == right) {
+        if (left == right) {
             return strs[left];
         }
 
@@ -25,8 +25,8 @@ private:
 
     string conquer(string lcpLeft, string lcpRight) {
         int minSize = min(lcpLeft.size(), lcpRight.size());
-        for(int i = 0; i < minSize; i++) {
-            if(lcpLeft[i] != lcpRight[i]) {
+        for (int i = 0; i < minSize; i++) {
+            if (lcpLeft[i] != lcpRight[i]) {
                 return lcpLeft.substr(0, i);
             }
         }
@@ -35,14 +35,14 @@ private:
 };
 
 int main(int argc, char* argv[]) {
-    // input data
+    // input
     vector<string> strs = {"flower", "flow", "flight"};
 
     // solution
     Solution s;
     string ans = s.longestCommonPrefix(strs);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
 
     return 0;
