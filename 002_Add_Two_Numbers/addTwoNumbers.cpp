@@ -17,13 +17,12 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    ListNode* addTwoNumbers (ListNode* l1, ListNode* l2) {
         ListNode* dummyHead = new ListNode(0);
         ListNode* curr = dummyHead;
         int carry = 0;
 
-        while (l1 != NULL || l2 != NULL || carry != 0)
-        {
+        while (l1 != NULL || l2 != NULL || carry != 0) {
             int x = l1 ? l1->val : 0;
             int y = l2 ? l2->val : 0;
             int sum = x + y + carry;
@@ -40,7 +39,7 @@ public:
     }
 };
 
-ListNode* arrayToList(vector<int>& nums) {
+ListNode* arrayToList (vector<int>& nums) {
     int sz = nums.size();
     if (nums.size() == 0) {
         return nullptr;
@@ -50,15 +49,14 @@ ListNode* arrayToList(vector<int>& nums) {
     ListNode* cur = head;
 
     // the rest elements
-    for(int i = 1; i < sz; i++) {
+    for (int i = 1; i < sz; i++) {
         cur->next = new ListNode(nums[i]);
         cur = cur->next;
     }
     return head;
 }
 
-int main(int argc, char* argv[])
-{
+int main (int argc, char* argv[]) {
     // input
     vector<int> data1 = {2, 4, 3};
     vector<int> data2 = {5, 6, 6};
@@ -72,7 +70,7 @@ int main(int argc, char* argv[])
     // output
     cout << "Answer: " << endl;
     ListNode *cur = answer;
-    while(cur != nullptr){
+    while (cur != nullptr) {
         cout << cur->val << " ";
         cur = cur->next;
     }
