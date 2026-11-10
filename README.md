@@ -13,3 +13,7 @@ Using C++
 ``` sh=
 g++ xxx.cpp
 ```
+
+# Coding Style
+
+https://github.com/majerle/c-code-style
