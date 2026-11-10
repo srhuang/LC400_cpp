@@ -6,16 +6,16 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
         int sz = numbers.size();
-        for(int i = 0; i < sz; i++) {
+        for (int i = 0; i < sz; i++) {
             // binary search
             int left = i + 1;
             int right = sz - 1;
-            while(left <= right) {
+            while (left <= right) {
                 int mid = (left + right) / 2;
                 int sum = numbers[i] + numbers[mid];
-                if(sum < target) {
+                if (sum < target) {
                     left = mid + 1;
-                } else if(sum > target) {
+                } else if (sum > target) {
                     right = mid - 1;
                 } else {
                     return {i + 1, mid + 1};
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 
     // output
     cout << "Answer: " << endl;
-    for(int i = 0; i < ans.size(); i++) {
+    for (int i = 0; i < ans.size(); i++) {
         cout << ans[i] << " ";
     }
     cout << endl;

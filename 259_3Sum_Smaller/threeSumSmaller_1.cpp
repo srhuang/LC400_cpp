@@ -8,11 +8,11 @@ public:
         int sz = nums.size();
         int cnt = 0;
         // find every possible set of triplets
-        for(int i = 0; i < sz; i++) {
-            for(int j = i + 1; j < sz; j++) {
-                for(int k = j + 1; k < sz; k++) {
+        for (int i = 0; i < sz; i++) {
+            for (int j = i + 1; j < sz; j++) {
+                for (int k = j + 1; k < sz; k++) {
                     int sum = nums[i] + nums[j] + nums[k];
-                    if(sum < target) {
+                    if (sum < target) {
                         cnt++;
                     }
                 }

@@ -11,16 +11,16 @@ public:
         sort(begin(nums), end(nums));
 
         // binary search
-        for(int i = 0; i < sz - 2; i++) {
-            for(int j = i + 1; j < sz - 1; j++) {
+        for (int i = 0; i < sz - 2; i++) {
+            for (int j = i + 1; j < sz - 1; j++) {
                 int left = j;
                 int right = sz - 1;
-                while(left < right) {
+                while (left < right) {
                     int mid = (left + right + 1) / 2;
                     int sum = nums[i] + nums[j] + nums[mid];
-                    if(sum < target) {
+                    if (sum < target) {
                         left = mid;
-                    }else{
+                    } else {
                         right = mid - 1;
                     }
                 } // while
