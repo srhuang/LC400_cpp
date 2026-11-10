@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> twoSum (vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int, int> hash;
         for (int i = 0; i < nums.size(); i++) {
             int diff = target - nums[i];
@@ -17,7 +17,7 @@ public:
     }
 };
 
-int main (int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
     // input
     vector<int> data = {2, 7, 11, 15};
 
