@@ -92,38 +92,35 @@ private:
                 result = INT_MIN;
                 sign = 1; // no need to deal with sign
             }
-
             state = s3;
         } else {
             result = result * 10 + digit;
             state = s2;
         }
     }
-
 };
 
 class Solution {
 public:
     int myAtoi(string s) {
         StateMachine sm;
-
         for (int i = 0; (i < s.size()) && (sm.getState() != s3); i++) {
             sm.trans(s[i]);
         }
-
         return sm.getResult();
     }
-
 };
 
 int main(int argc, char* argv[]) {
-    // input data
+    // input
     string data("42");
 
     // solution
     Solution s;
     int ans = s.myAtoi(data);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
+
+    return 0;
 }

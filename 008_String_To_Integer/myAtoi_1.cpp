@@ -16,7 +16,7 @@ public:
         }
 
         // check the sign
-        if (index < n && s[index] == '+'){
+        if (index < n && s[index] == '+') {
             sign = 1;
             index++;
         } else if (index < n && s[index] == '-') {
@@ -34,24 +34,24 @@ public:
                 ) {
                 return (sign == 1) ? INT_MAX : INT_MIN;
             }
-
             result = result * 10 + digit;
             index++;
         }
-
         return result * sign;
     }
 
 };
 
 int main(int argc, char* argv[]) {
-    // input data
+    // input
     string data("42");
 
     // solution
     Solution s;
     int ans = s.myAtoi(data);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
+
+    return 0;
 }

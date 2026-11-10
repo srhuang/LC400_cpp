@@ -6,8 +6,7 @@ class Solution {
 public:
     int reverse(int x) {
         int rev = 0;
-        while (0 != x)
-        {
+        while (0 != x) {
             int pop = x % 10;
             x /= 10;
             // check overflow and underflow
@@ -25,15 +24,16 @@ public:
     }
 };
 
-int main(int argc, char* argv[])
-{
-    // input data
+int main(int argc, char* argv[]) {
+    // input
     int data = -123;
 
     // solution
     Solution s;
     int ans = s.reverse(data);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
+
+    return 0;
 }
