@@ -2,13 +2,10 @@
 
 using namespace std;
 
-
 class Solution {
 public:
-    string convert(string s, int numRows)
-    {
-        if (1 == numRows)
-        {
+    string convert(string s, int numRows) {
+        if (1 == numRows) {
             return s;
         }
 
@@ -20,11 +17,9 @@ public:
         int row = 0;
         int col = 0;
         int index = 0;
-        while (index < n) 
-        {
+        while (index < n) {
             // move down
-            while((row < numRows) && (index < n))
-            {
+            while ((row < numRows) && (index < n)) {
                 matrix[row][col] = s[index];
                 row++;
                 index++;
@@ -33,8 +28,7 @@ public:
             col++;
 
             // move up
-            while ((row > 0) && (col < numCols) && (index < n))
-            {
+            while ((row > 0) && (col < numCols) && (index < n)) {
                 matrix[row][col] = s[index];
                 row--;
                 col++;
@@ -44,12 +38,9 @@ public:
 
         // construct the answer
         string ans;
-        for (row = 0; row < numRows; row++)
-        {
-            for (col = 0; col < numCols; col++)
-            {
-                if (matrix[row][col] != ' ')
-                {
+        for (row = 0; row < numRows; row++) {
+            for (col = 0; col < numCols; col++) {
+                if (matrix[row][col] != ' ') {
                     ans += matrix[row][col];
                 }
             }
@@ -59,15 +50,16 @@ public:
 };
 
 int main(int argc, char* argv[]) {
-    // input data
+    // input
     string data("PAYPALISHIRING");
 
     // solution
     Solution s;
     string ans = s.convert(data, 3);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
 
+    return 0;
 }
 
