@@ -13,22 +13,22 @@ public:
 
         // binary search
         int sz = nums.size();
-        for(int i = 0; i < sz; i++) {
-            for(int j = i + 1; j < sz; j++) {
+        for (int i = 0; i < sz; i++) {
+            for (int j = i + 1; j < sz; j++) {
                 int left = j + 1;
                 int right = sz - 1;
-                while(left <= right) {
+                while (left <= right) {
                     int mid = (left + right) / 2;
                     int sum = nums[i] + nums[j] + nums[mid];
-                    if(sum < target) {
+                    if (sum < target) {
                         left = mid + 1;
-                    }else if(sum > target) {
+                    } else if (sum > target) {
                         right = mid - 1;
-                    }else{
+                    } else {
                         return sum;
                     }
                     // update the diff
-                    if(abs(sum - target) < abs(diff)) {
+                    if (abs(sum - target) < abs(diff)) {
                         diff = target - sum;
                     }
                 } // while

@@ -27,12 +27,12 @@ public:
         ListNode* second = &dummy;
 
         // the gap between first pointer and second pointer is n.
-        for(int i = 0; i <= n; i++) {
+        for (int i = 0; i <= n; i++) {
             first = first->next;
         }
 
         // mode the first pointer to the end and keep the gap
-        while(first != nullptr) {
+        while (first != nullptr) {
             first = first->next;
             second = second->next;
         }
@@ -52,7 +52,7 @@ ListNode* arrayToList(vector<int>& nums) {
     ListNode* cur = head;
 
     // the rest elements
-    for(int i = 1; i < sz; i++) {
+    for (int i = 1; i < sz; i++) {
         cur->next = new ListNode(nums[i]);
         cur = cur->next;
     }
@@ -71,7 +71,7 @@ int main(int argc, char* argv[]) {
     // output
     cout << "Answer: " << endl;
     ListNode* cur = ans;
-    while(cur != nullptr) {
+    while (cur != nullptr) {
         cout << cur->val << " ";
         cur = cur->next;
     }

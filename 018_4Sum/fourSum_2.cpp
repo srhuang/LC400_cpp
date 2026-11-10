@@ -21,14 +21,14 @@ private:
         int sz = nums.size();
 
         // two sum
-        if(k == 2) {
+        if (k == 2) {
             return twoSum(nums, target, start);
         }
 
         // k > 2
-        for(int i = start; i < sz; i++) {
+        for (int i = start; i < sz; i++) {
             // ignore duplicate results
-            if((i != start) && (nums[i] == nums[i-1])) {
+            if ((i != start) && (nums[i] == nums[i-1])) {
                 continue;
             }
 
@@ -37,7 +37,7 @@ private:
                 i+1, k-1);
             
             // combine the results
-            for(int j = 0; j < ret.size(); j++) {
+            for (int j = 0; j < ret.size(); j++) {
                 vector<int> tmp = {nums[i]};
                 tmp.insert(tmp.end(), ret[j].begin(), ret[j].end());
                 ans.push_back(tmp);
@@ -54,12 +54,12 @@ private:
         unordered_set<long long> seen;
 
         // find the complement
-        for(int i = start; i < sz; i++) {
+        for (int i = start; i < sz; i++) {
             long long complement = target - nums[i];
-            if(seen.count(complement)) {
+            if (seen.count(complement)) {
                 ans.push_back({nums[i], int(complement)});
                 //ignore duplicate results
-                while((i+1 < sz) && (nums[i] == nums[i+1])) {
+                while ((i+1 < sz) && (nums[i] == nums[i+1])) {
                     i++;
                 }
             }
@@ -80,8 +80,8 @@ int main(int argc, char* argv[]) {
 
     // output
     cout << "Answer: " << endl;
-    for(int i = 0; i < ans.size(); i++) {
-        for(int j = 0; j < ans[i].size(); j++) {
+    for (int i = 0; i < ans.size(); i++) {
+        for (int j = 0; j < ans[i].size(); j++) {
             cout << ans[i][j] << " ";
         }
         cout << endl;

@@ -25,7 +25,7 @@ public:
         // first pass for calculating the length
         int length = 0;
         ListNode* cur = head;
-        while(cur != nullptr) {
+        while (cur != nullptr) {
             length++;
             cur = cur->next;
         }
@@ -33,7 +33,7 @@ public:
         // second pass for removing the node
         int pos = length - n;
         cur = &dummy;
-        while(pos > 0) {
+        while (pos > 0) {
             cur = cur->next;
             pos--;
         }
@@ -53,7 +53,7 @@ ListNode* arrayToList(vector<int>& nums) {
     ListNode* cur = head;
 
     // the rest elements
-    for(int i = 1; i < sz; i++) {
+    for (int i = 1; i < sz; i++) {
         cur->next = new ListNode(nums[i]);
         cur = cur->next;
     }
@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
     // output
     cout << "Answer: " << endl;
     ListNode* cur = ans;
-    while(cur != nullptr) {
+    while (cur != nullptr) {
         cout << cur->val << " ";
         cur = cur->next;
     }

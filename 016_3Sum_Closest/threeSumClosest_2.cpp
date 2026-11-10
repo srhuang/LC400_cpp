@@ -13,21 +13,21 @@ public:
 
         // n times two pointers algorithm
         int sz = nums.size();
-        for(int i = 0; i < sz; i++) {
+        for (int i = 0; i < sz; i++) {
             // two pointers algorithm
             int left = i + 1;
             int right = sz - 1;
-            while(left < right) {
+            while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                if(sum < target) {
+                if (sum < target) {
                     left++;
-                }else if(sum > target) {
+                } else if (sum > target) {
                     right--;
-                }else{
+                } else {
                     return sum;
                 }
                 // update the diff
-                if(abs(sum - target) < abs(diff)) {
+                if (abs(sum - target) < abs(diff)) {
                     diff = target - sum;
                 }
             } // while

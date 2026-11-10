@@ -26,14 +26,14 @@ public:
 private:
     void backtracking(string path, int index) {
         // pruning
-        if(path.size() == sz) {
+        if (path.size() == sz) {
             ans.push_back(path);
             return;
         }
 
         // exploration
         string choices = letters[dgt[index]];
-        for(int i = 0; i < choices.size(); i++) {
+        for (int i = 0; i < choices.size(); i++) {
             path.push_back(choices[i]);
             backtracking(path, index + 1);
             path.pop_back();
@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
 
     // output
     cout << "Answer: "<< endl;
-    for(int i = 0; i < ans.size(); i++) {
+    for (int i = 0; i < ans.size(); i++) {
         cout << ans[i] << " ";
     }
     cout << endl;
