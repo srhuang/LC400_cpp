@@ -11,27 +11,25 @@ public:
             "X", "IX", "V", "IV", "I"};
 
         string ans;
-
         for (int i = 0; (i < values.size()) && (num > 0); i++) {
             while(values[i] <= num) {
                 num -= values[i];
                 ans += symbols[i];
             }
         }
-
         return ans;
     }
 };
 
 int main(int agrc, char* argv[]) {
-    // input data
+    // input
     int data = 3749;
 
     // solution
     Solution s;
     string ans = s.intToRoman(data);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
 
     return 0;

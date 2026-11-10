@@ -1,6 +1,6 @@
 012 Integer to Roman
 ===
-`Integer` `Math`
+`Hash` `Math`
 # Explanation
 * 整數轉成羅馬數字。
 * M(1000), D(500), C(100), L(50), X(10), V(5), I(1)

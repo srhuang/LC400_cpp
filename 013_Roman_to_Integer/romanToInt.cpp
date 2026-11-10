@@ -29,20 +29,19 @@ public:
                 i ++;
             }
         } // while
-
         return ans;
     }
 };
 
 int main(int argc, char* argv[]) {
-    // input data
+    // input
     string data = "MCMXCIV";
 
     // solution
     Solution s;
     int ans = s.romanToInt(data);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
 
     return 0;
