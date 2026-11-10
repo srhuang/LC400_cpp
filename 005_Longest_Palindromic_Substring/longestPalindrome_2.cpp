@@ -40,17 +40,17 @@ public:
     }
 };
 
-int main()
-{
-    // input data
+int main(int argc, char* argv[]) {
+    // input
     string data("babad");
 
     // solution
     Solution s;
     string ans = s.longestPalindrome(data);
 
-    // print
+    // output
     cout << "Answer: " << ans << endl;
 
+    return 0;
 }
 
