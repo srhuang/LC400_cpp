@@ -14,7 +14,6 @@ struct ListNode {
     ListNode(int x, ListNode* node) {val = x; next = node;}
 };
 
-
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -45,14 +44,15 @@ public:
 
 ListNode* arrayToList(vector<int>& nums) {
     int sz = nums.size();
-    if (nums.size() == 0) {
+    if (0 == sz) {
         return nullptr;
     }
+
     // first element
     ListNode* head = new ListNode(nums[0]);
-    ListNode* cur = head;
 
     // the rest elements
+    ListNode* cur = head;
     for (int i = 1; i < sz; i++) {
         cur->next = new ListNode(nums[i]);
         cur = cur->next;
