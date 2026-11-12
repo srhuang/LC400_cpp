@@ -1,6 +1,6 @@
 020 Valid Parentheses
 ===
-`Stack` `Operation`
+`Stack` `Stack Operation`
 # Explanation
 * 給定一個充滿括號的字串。
 * 判斷括號是否符合合法。
