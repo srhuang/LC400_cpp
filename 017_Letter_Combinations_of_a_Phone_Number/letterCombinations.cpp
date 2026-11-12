@@ -3,16 +3,15 @@
 using namespace std;
 
 class Solution{
+    // variables
     vector<string> ans; // backtracking
     unordered_map<char, string> letters = {
         {'2', "abc"}, {'3', "def"}, {'4', "ghi"},
         {'5', "jkl"}, {'6', "mno"}, {'7', "pqrs"},
         {'8', "tuv"}, {'9', "wxyz"}
     };
-
-    // variables
     string dgt = "";
-    int sz = 0;;
+    int sz = 0;
 public:
     vector<string> letterCombinations(string digits) {
         // variables
