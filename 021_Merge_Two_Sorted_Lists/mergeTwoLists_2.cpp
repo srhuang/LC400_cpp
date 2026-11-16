@@ -17,7 +17,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode head(0);
+        ListNode head;
         // iteration
         ListNode* cur = &head;
         while(l1 != nullptr && l2 != nullptr) {
