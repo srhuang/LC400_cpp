@@ -20,7 +20,7 @@ public:
         ListNode head;
         // iteration
         ListNode* cur = &head;
-        while(l1 != nullptr && l2 != nullptr) {
+        while ((l1 != nullptr) && (l2 != nullptr)) {
             if (l1->val < l2->val) {
                 cur->next = l1;
                 l1 = l1->next;
