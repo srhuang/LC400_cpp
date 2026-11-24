@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -14,10 +13,11 @@ public:
         int cnt = 1;
         for (int i = 1; i < nums.size(); i++)
         {
+            // track the count
             if (nums[i] == nums[j]) {
                 cnt++;
             } else {
-                cnt = 1; // reset the count
+                cnt = 1;
             }
 
             if (cnt <= 2) {
@@ -29,24 +29,18 @@ public:
     }
 };
 
-int main(int argc, char* argv[])
-{
-    // input data
-    int ary[] = {1,2,3,3,3,4,4,4,4,5,5,5,5,5,5,5,6,7,8};
-    int amount = sizeof(ary) / sizeof(ary[0]);
-    vector<int> data(ary, ary + amount);
+int main(int argc, char* argv[]) {
+    // input
+    vector<int> nums = {1,2,3,3,3,4,4,4,4,5,5,5,5,5,5,5,6,7,8};
 
     // solution
     Solution s;
-    int answer;
-    answer = s.removeDuplicates(data);
+    int answer = s.removeDuplicates(nums);
 
-    // print
+    // output
     cout << "Answer: " << answer << endl;
-    cout << "Output: ";
-    for(int i = 0; i < answer; i++)
-    {
-        cout << data[i] << " ";
+    for (int i = 0; i < answer; i++) {
+        cout << nums[i] << " ";
     }
     cout << endl;
 
